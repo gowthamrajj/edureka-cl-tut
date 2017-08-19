@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Insert Contact</h1>
+  <hr>
+  <form #form="ngForm">
+    <div class="row form-group">
+      <div class="col-md-6">
+        <label for="firstName" class="col-form-label">First Name</label>
+        <input name="firstName" class="form-control" type="text" [(ngModel)]="firstName" required>
+      </div>
+      <div class="col-md-6">
+        <label for="lastName" class="col-form-label">Last Name</label>
+        <input name="lastName" class="form-control" type="text" [(ngModel)]="lastName" required>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-6">
+        <label for="phone" class="col-form-label">Phone</label>
+        <input name="phone" class="form-control" type="text" [(ngModel)]="phone" required>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-6">
+        <button class="btn btn-primary"  style="width: 100%; text-align:center" (click)="addContact()" type="button" [disabled]="form.invalid">Add</button>
+      </div>
+    </div>
+  </form>
+  <br>
+  <br>
+  <h1>Available Contacts</h1>
+  <hr>
+  <div *ngFor="let contact of contacts">
+    <div class="row marginbot">
+      <div class="col">
+        {{contact.firstName}} {{contact.lastName}}
+      </div>
+      <div class="col">
+        {{contact.phone}}
+      </div>
+      <div class="col">
+        <button class="btn btn-danger btn-block" (click)="deleteContact(contact._id)" type="button">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

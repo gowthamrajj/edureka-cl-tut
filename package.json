@@ -1,0 +1,17 @@
+{
+  "name": "edureka-mean-cl",
+  "version": "1.0.0",
+  "description": "Edureka Nodejs MEAN stack tutorial app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gowtham raj j",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.7"
+  }
+}
